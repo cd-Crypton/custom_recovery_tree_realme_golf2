@@ -6,15 +6,15 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 
-# Inherit some common twrp/pb/omni stuff.
-$(call inherit-product-if-exists, vendor/twrp/config/common.mk)
+# Inherit some common PB stuff.
+$(call inherit-product, vendor/pb/config/common.mk)
 
 # Inherit from cannong device
 $(call inherit-product, device/realme/RMX3491/device.mk)
 
 PRODUCT_RELEASE_NAME := RMX3491
 PRODUCT_DEVICE := $(PRODUCT_RELEASE_NAME)
-PRODUCT_NAME := twrp_$(PRODUCT_RELEASE_NAME)
+PRODUCT_NAME := omni_$(PRODUCT_RELEASE_NAME)
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := Realme 9i 4G
 PRODUCT_MANUFACTURER := $(PRODUCT_BRAND)
